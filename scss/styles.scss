@@ -1,0 +1,670 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/**COLORES**/
+
+* {
+  margin: 0em;
+  padding: 0em;
+}
+
+body {
+  background: linear-gradient(45deg, #80FFDB 54%, #5390D9 46%);
+  font-family: sans-serif;
+}
+
+/* ENCABEZADO */
+
+.bg-light {
+  background-color: #000 !important;
+}
+
+.nav-item dropdown {
+  color: blanchedalmond;
+}
+
+.dropdown-menu {
+  background-color: blanchedalmond !important;
+  background-color: #000 !important;
+}
+
+nav a {
+  color: blanchedalmond !important;
+}
+
+/* SECCION INICIO */
+
+.index__title1 {
+  font-size: 13em;
+}
+
+.index__title2 {
+  padding: 1.5em;
+  font-size: 3em;
+  margin: 0%;
+}
+
+.index__title3 {
+  background-color: #5390D9;
+  position: relative;
+  color: #fff;
+
+  &:after {
+    content: "";
+    border-left: 0px solid black;
+    background: #5390D9;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: indextitle3 2s infinite alternate steps(18);
+  }
+}
+
+@keyframes indextitle3 {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+.index2 p {
+  display: flex;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 3em;
+}
+
+.index3 {
+  text-align: center;
+}
+
+.index3__titile {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.containerr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.chevron {
+  position: absolute;
+  width: 2.1rem;
+  height: 0.48rem;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 2s ease-out infinite;
+
+  &:first-child {
+    animation: move-chevron 2s ease-out 1s infinite;
+  }
+
+  &:nth-child(2) {
+    animation: move-chevron 2s ease-out 2s infinite;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #2c3e50;
+  }
+
+  &:before {
+    left: 0;
+    transform: skewY(30deg);
+  }
+
+  &:after {
+    right: 0;
+    width: 50%;
+    transform: skewY(-30deg);
+  }
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+
+  33.3% {
+    opacity: 1;
+    transform: translateY(2.28rem);
+  }
+
+  66.6% {
+    opacity: 1;
+    transform: translateY(3.12rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+.card__imagehome {
+  height: 700px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card__h1 {
+  background-image: url(../imagenes/webdevcar.jpg);
+}
+
+.card__h2 {
+  background-image: url(../imagenes/uxuicar.jpg);
+}
+
+.card__h3 {
+  background-image: url(../imagenes/ciberseguridad4.jpg);
+}
+
+.arriba {
+  display: flex;
+  justify-content: center;
+
+  i {
+    color: white;
+
+    &:hover {
+      color: #000;
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+  }
+}
+
+/* SECCION Our Professionals */
+
+.wtitle1, .wtitle2 {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.wcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 270px;
+  height: 550px;
+  margin: 50px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 12px #fff;
+
+  a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &:hover {
+    background-color: #3e3e3e;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+
+  h2, h5 {
+    text-align: center;
+  }
+
+  p {
+    margin-left: 1em;
+  }
+}
+
+.card__image {
+  height: 700px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card__1 {
+  background-image: url(../imagenes/worker1.jpg);
+}
+
+.card__2 {
+  background-image: url(../imagenes/worker2.jpg);
+}
+
+.card__3 {
+  background-image: url(../imagenes/worker3.jpg);
+}
+
+.card__4 {
+  background-image: url(../imagenes/worker4.jpg);
+}
+
+.card__5 {
+  background-image: url(../imagenes/worker5.jpg);
+}
+
+.card__6 {
+  background-image: url(../imagenes/worker6.jpg);
+}
+
+.card__7 {
+  background-image: url(../imagenes/worker7.jpg);
+}
+
+.card__8 {
+  background-image: url(../imagenes/worker8.jpg);
+}
+
+.card__9 {
+  background-image: url(../imagenes/worker9.jpg);
+}
+
+/* SECCION CLIENTES */
+
+.container3__title {
+  text-align: center;
+  border: double 3px #83b3d3;
+  background-color: #333;
+  color: #aec7ec;
+}
+
+.container3 {
+  display: block;
+  margin: auto;
+}
+
+/*SECCION CONOCENOS*/
+
+.container4__title {
+  text-align: center;
+  border: double 3px #83b3d3;
+  background-color: #333;
+  color: #aec7ec;
+}
+
+.image12 {
+  padding-top: 2em;
+  display: block;
+  margin: auto;
+}
+
+.iconosc ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 2em;
+  justify-content: space-around;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  margin-bottom: 2em;
+}
+
+/* Seccion de Contacto*/
+
+.parteizquierda {
+  background-color: #000;
+  height: 105vh;
+  width: 50%;
+  padding: 1rem;
+}
+
+.partederecha {
+  background-image: url(../imagenes/contactofondo.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 105vh;
+  padding: 1rem;
+}
+
+.pantalla-dividida {
+  display: flex;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+
+input[type=text], select, textarea {
+  width: 100%;
+
+  /* Full width */
+  padding: 12px;
+
+  /* Some padding */
+  border: 1px solid #ccc;
+
+  /* Gray border */
+  border-radius: 4px;
+
+  /* Rounded borders */
+  box-sizing: border-box;
+
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+
+  /* Add a top margin */
+  margin-bottom: 16px;
+
+  /* Bottom margin */
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+  background-color: #80FFDB;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #008a93;
+  }
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+/* Add a background color and some padding around the form */
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.container5 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-top: 1em;
+
+  i {
+    color: #000;
+    padding-bottom: 10px;
+  }
+}
+
+.tituloscontacto {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border: blanchedalmond solid 3px;
+}
+
+.formulario {
+  border-radius: 5em;
+  color: #fff;
+}
+
+.formulario__title {
+  text-align: center;
+}
+
+/*SECCIONES DE SOLUCIONES*/
+/*WEB DEV*/
+
+.webdevright {
+  background-color: #000;
+  height: 105vh;
+  width: 50%;
+  padding: 1rem;
+  color: #fff;
+  border: solid 2px #fff;
+}
+
+.webdevimg {
+  background-image: url(/imagenes/cssweb.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 105vh;
+  padding: 1rem;
+  border: solid 2px #fff;
+}
+
+.webtitle1 {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border: blanchedalmond solid 3px;
+}
+
+.webdevright__title {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+/*SECCION CIBERSEGURIDAD*/
+
+.cibers {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+}
+
+.cibers__title {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.cibers p {
+  margin: 5px;
+}
+
+/*SECCION UX UI*/
+
+#pantalla-divididauxui {
+  display: flex;
+  flex-direction: row;
+}
+
+.uxuiright {
+  background-color: #000;
+  height: 110vh;
+  width: 50%;
+  padding: 1rem;
+  color: #fff;
+  border: solid 2px #fff;
+}
+
+.uxuileft {
+  background-image: url(/imagenes/uxuisec.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 110vh;
+  padding: 1rem;
+  border: solid 2px #fff;
+}
+
+.uxuititle {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border: blanchedalmond solid 3px;
+}
+
+.webdevright__title {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 50px 100px;
+  background-color: #008a93;
+}
+
+.footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+
+footer h2 {
+  position: relative;
+  margin-bottom: 15px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+    width: 50%;
+    height: 2px;
+    background-color: #83b3d3;
+  }
+}
+
+.fredes {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  column-gap: 10px;
+
+  li {
+    list-style: none;
+
+    a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 4px;
+
+      &:hover {
+        background: blanchedalmond;
+      }
+
+      .fa {
+        color: black;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.faccesos {
+  position: relative;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: blanchedalmond;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: blanchedalmond;
+    }
+  }
+}
+
+.info {
+  position: relative;
+
+  li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: blanchedalmond;
+    }
+  }
+}
+
+.copyrightText {
+  background-color: #000;
+  text-align: center;
+  color: #2f4f4f;
+  padding: 5px;
+}
+
+/* MOBILE FIRST */
+@media (max-width: 320px) {
+  .index__title1 {
+    font-size: 8em;
+  }
+
+  .footer {
+    background-color: #008a93;
+    width: auto;
+    position: relative;
+    height: auto;
+    padding: 50px 100px;
+    margin: 0%;
+    padding: 0%;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #008a93;
+  }
+
+  .copyrightText {
+    padding: 8px 40px;
+  }
+
+  body {
+    font-size: 5vw;
+  }
+
+  .container1 {
+    width: auto;
+  }
+
+  .pantalla-dividida {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .parteizquierda, .partederecha {
+    width: 100%;
+  }
+}
