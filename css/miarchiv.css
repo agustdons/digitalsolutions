@@ -37,15 +37,14 @@ nav a {
   background-color: #5390D9;
   position: relative;
   color: #fff; }
-
-.index__title3:after {
-  content: "";
-  border-left: 0px solid black;
-  background: #5390D9;
-  right: 0;
-  height: 100%;
-  position: absolute;
-  animation: indextitle3 2s infinite alternate steps(18); }
+  .index__title3:after {
+    content: "";
+    border-left: 0px solid black;
+    background: #5390D9;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: indextitle3 2s infinite alternate steps(18); }
 
 @keyframes indextitle3 {
   from {
@@ -57,18 +56,17 @@ nav a {
   display: flex;
   text-align: center;
   padding: 1.5em;
-  font-size: 3em; }
+  font-size: 2.5em; }
 
 .index3 {
   text-align: center; }
 
 .index3__titile {
   text-align: center; }
-
-.index3__titile a {
-  text-decoration: none;
-  text-align: center;
-  color: #fff; }
+  .index3__titile a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff; }
 
 .containerr {
   display: flex;
@@ -83,30 +81,24 @@ nav a {
   opacity: 0;
   transform: scale(0.3);
   animation: move-chevron 2s ease-out infinite; }
-
-.chevron:first-child {
-  animation: move-chevron 2s ease-out 1s infinite; }
-
-.chevron:nth-child(2) {
-  animation: move-chevron 2s ease-out 2s infinite; }
-
-.chevron:before,
-.chevron:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background: #2c3e50; }
-
-.chevron:before {
-  left: 0;
-  transform: skewY(30deg); }
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skewY(-30deg); }
+  .chevron:first-child {
+    animation: move-chevron 2s ease-out 1s infinite; }
+  .chevron:nth-child(2) {
+    animation: move-chevron 2s ease-out 2s infinite; }
+  .chevron:before, .chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #2c3e50; }
+  .chevron:before {
+    left: 0;
+    transform: skewY(30deg); }
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skewY(-30deg); }
 
 @keyframes move-chevron {
   25% {
@@ -139,22 +131,16 @@ nav a {
 .arriba {
   display: flex;
   justify-content: center; }
-
-.arriba i {
-  color: white; }
-
-.arriba i:hover {
-  color: #000;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease; }
+  .arriba i {
+    color: white; }
+    .arriba i:hover {
+      color: #000;
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: all 1s ease; }
 
 /* SECCION Our Professionals */
-.wtitle1 {
-  text-align: center;
-  padding-top: 2em; }
-
-.wtitle2 {
+.wtitle1, .wtitle2 {
   text-align: center;
   padding-top: 2em; }
 
@@ -170,32 +156,25 @@ nav a {
   margin: 50px;
   border-radius: 15px;
   box-shadow: 3px 3px 12px #fff; }
-
-.card a {
-  background-color: black;
-  color: white;
-  padding: 15px 20px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; }
-
-.card:hover {
-  background-color: #3e3e3e;
-  color: white;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease; }
-
-.card h2 {
-  text-align: center; }
-
-.card h5 {
-  text-align: center; }
-
-.card p {
-  margin-left: 1em; }
+  .card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; }
+  .card:hover {
+    background-color: #3e3e3e;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease; }
+  .card h2, .card h5 {
+    text-align: center; }
+  .card p {
+    margin-left: 1em; }
 
 .card__image {
   height: 700px;
@@ -307,11 +286,10 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer; }
+  input[type=submit]:hover {
+    background-color: #008a93; }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #008a93; }
-
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
@@ -323,10 +301,9 @@ input[type=submit]:hover {
   justify-content: center;
   justify-content: space-evenly;
   margin-top: 1em; }
-
-.container5 i {
-  color: #000;
-  padding-bottom: 10px; }
+  .container5 i {
+    color: #000;
+    padding-bottom: 10px; }
 
 .tituloscontacto {
   text-align: center;
@@ -434,76 +411,62 @@ footer {
 footer h2 {
   position: relative;
   margin-bottom: 15px; }
-
-footer h2::before {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0%;
-  width: 50%;
-  height: 2px;
-  background-color: #83b3d3; }
+  footer h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+    width: 50%;
+    height: 2px;
+    background-color: #83b3d3; }
 
 .fredes {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 50px);
   column-gap: 10px; }
-
-.fredes li {
-  list-style: none; }
-
-.fredes li a {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 4px; }
-
-.fredes li a:hover {
-  background: blanchedalmond; }
-
-.fredes li a .fa {
-  color: black;
-  font-size: 20px; }
+  .fredes li {
+    list-style: none; }
+    .fredes li a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 4px; }
+      .fredes li a:hover {
+        background: blanchedalmond; }
+      .fredes li a .fa {
+        color: black;
+        font-size: 20px; }
 
 .faccesos {
   position: relative; }
-
-.faccesos li {
-  list-style: none; }
-
-.faccesos li {
-  margin-bottom: 10px;
-  text-decoration: none; }
-
-.faccesos li:hover {
-  color: blanchedalmond; }
-
-.faccesos a {
-  text-decoration: none;
-  color: black; }
-
-.faccesos a:hover {
-  color: blanchedalmond; }
+  .faccesos li {
+    list-style: none;
+    margin-bottom: 10px;
+    text-decoration: none; }
+    .faccesos li:hover {
+      color: blanchedalmond; }
+  .faccesos a {
+    text-decoration: none;
+    color: black; }
+    .faccesos a:hover {
+      color: blanchedalmond; }
 
 .info {
   position: relative; }
-
-.info li {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  margin-bottom: 16px; }
-
-.info a {
-  text-decoration: none;
-  color: black; }
-
-.info a:hover {
-  color: blanchedalmond; }
+  .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px; }
+  .info a {
+    text-decoration: none;
+    color: black; }
+    .info a:hover {
+      color: blanchedalmond; }
 
 .copyrightText {
   background-color: #000;
@@ -534,7 +497,5 @@ footer h2::before {
   .pantalla-dividida {
     display: flex;
     flex-direction: column; }
-  .parteizquierda {
-    width: 100%; }
-  .partederecha {
+  .parteizquierda, .partederecha {
     width: 100%; } }
