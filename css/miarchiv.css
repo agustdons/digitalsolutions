@@ -1,25 +1,7 @@
-@keyframes indextitle3 {
-  from {
-    width: 100%; }
-  to {
-    width: 0; } }
-
-@keyframes move-chevron {
-  25% {
-    opacity: 1; }
-  33.3% {
-    opacity: 1;
-    transform: translateY(2.28rem); }
-  66.6% {
-    opacity: 1;
-    transform: translateY(3.12rem); }
-  100% {
-    opacity: 0;
-    transform: translateY(4.8rem) scale(0.5); } }
-
 html {
   scroll-behavior: smooth; }
 
+/**COLORES**/
 * {
   margin: 0em;
   padding: 0em; }
@@ -28,6 +10,7 @@ body {
   background: linear-gradient(45deg, #80FFDB 54%, #5390D9 46%);
   font-family: sans-serif Georgia, 'Times New Roman', Times, serif; }
 
+/* ENCABEZADO */
 .bg-light {
   background-color: #000 !important; }
 
@@ -41,6 +24,7 @@ body {
 nav a {
   color: blanchedalmond !important; }
 
+/* SECCION INICIO */
 .index__title1 {
   font-size: 13em; }
 
@@ -61,6 +45,12 @@ nav a {
     height: 100%;
     position: absolute;
     animation: indextitle3 2s infinite alternate steps(18); }
+
+@keyframes indextitle3 {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
 
 .index2 p {
   display: flex;
@@ -95,25 +85,33 @@ nav a {
     animation: move-chevron 2s ease-out 1s infinite; }
   .chevron:nth-child(2) {
     animation: move-chevron 2s ease-out 2s infinite; }
-  .chevron:before {
+  .chevron:before, .chevron:after {
     content: '';
     position: absolute;
     top: 0;
     height: 100%;
     width: 50%;
-    background: #2c3e50;
+    background: #2c3e50; }
+  .chevron:before {
     left: 0;
     transform: skewY(30deg); }
   .chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background: #2c3e50;
     right: 0;
     width: 50%;
     transform: skewY(-30deg); }
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1; }
+  33.3% {
+    opacity: 1;
+    transform: translateY(2.28rem); }
+  66.6% {
+    opacity: 1;
+    transform: translateY(3.12rem); }
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5); } }
 
 .card__imagehome {
   height: 700px;
@@ -141,11 +139,8 @@ nav a {
       transform: scale(1.03);
       transition: all 1s ease; }
 
-.wtitle1 {
-  text-align: center;
-  padding-top: 2em; }
-
-.wtitle2 {
+/* SECCION Our Professionals */
+.wtitle1, .wtitle2 {
   text-align: center;
   padding-top: 2em; }
 
@@ -176,9 +171,7 @@ nav a {
     cursor: pointer;
     transform: scale(1.03);
     transition: all 1s ease; }
-  .card h2 {
-    text-align: center; }
-  .card h5 {
+  .card h2, .card h5 {
     text-align: center; }
   .card p {
     margin-left: 1em; }
@@ -216,28 +209,20 @@ nav a {
 .card__9 {
   background-image: url(../imagenes/worker9.jpg); }
 
-.container3__title {
-  text-align: center;
-  border: double 3px #83b3d3;
-  background-color: #333;
-  color: #aec7ec; }
-
-.container3 {
-  display: block;
-  margin: auto; }
-
+/*SECCION CONOCENOS*/
 .container4 {
   margin: 1em;
   background-color: #fff;
   box-shadow: 10px 5px 5px black; }
-  .container4 p {
-    margin-left: 1em; }
 
 .container4__title {
   text-align: center;
   color: #fff;
   border: solid 3px;
   background-color: #000; }
+
+.container4 p {
+  margin-left: 1em; }
 
 .image12 {
   width: 100%;
@@ -253,14 +238,16 @@ nav a {
   font-size: 25px;
   margin-bottom: 2em; }
 
+/* SECCION DE CONTACTO*/
 .parteizquierda {
   background-color: #000;
   height: 105vh;
   width: 50%;
   padding: 1rem; }
-  .parteizquierda h2 {
-    color: #fff;
-    margin-top: 1em; }
+
+.parteizquierda h2 {
+  color: #fff;
+  margin-top: 1em; }
 
 .partederecha {
   background-image: url(../imagenes/contactofondo.jpeg);
@@ -273,27 +260,8 @@ nav a {
 .pantalla-dividida {
   display: flex; }
 
-input[type=text] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical; }
-
-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical; }
-
-textarea {
+/* FORMULARIO CONTACTO */
+input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -345,6 +313,8 @@ input[type=submit] {
   margin-top: 2em;
   margin-left: 1em; }
 
+/*SECCIONES DE SOLUCIONES*/
+/*WEB DEV*/
 .webdevright {
   background-color: #000;
   height: 105vh;
@@ -370,22 +340,21 @@ input[type=submit] {
 .webdevright__title {
   text-align: center;
   padding-top: 3em;
-  padding-bottom: 2em;
-  text-align: center;
-  padding-top: 3em;
   padding-bottom: 2em; }
 
+/*SECCION CIBERSEGURIDAD*/
 .cibers {
   display: flex;
   background: #5390d9;
   background: linear-gradient(0deg, #5390d9 0%, black 48%);
   color: #fff; }
-  .cibers p {
-    margin: 5px; }
 
 .cibers__title {
   text-align: center;
   padding-top: 2em; }
+
+.cibers p {
+  margin: 5px; }
 
 .cibers__title1 {
   text-align: center;
@@ -397,43 +366,82 @@ input[type=submit] {
   display: flex;
   background-color: #fff;
   box-shadow: 10px 5px 5px black;
-  margin: 1em; }
+  border-radius: 30px 0px 30px 0px;
+  margin: 3em; }
+
+.segserv1:hover {
+  background-color: #3e3e3e;
+  color: blanchedalmond;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease; }
 
 .segserv2 {
   display: flex;
   background-color: #000;
   box-shadow: 10px 5px 5px #fff;
+  border-radius: 0px 30px 0px 30px;
   color: #fff;
-  margin: 1em; }
+  margin: 3em; }
 
-.segserv3 {
-  display: flex;
-  background-color: #fff;
-  box-shadow: 10px 5px 5px black;
-  margin: 1em; }
+.segserv2:hover {
+  background-color: blanchedalmond;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease; }
 
-.segserv4 {
-  display: flex;
-  background-color: #000;
-  box-shadow: 10px 5px 5px #fff;
-  color: #fff;
-  margin: 1em; }
+.imgseg2 img {
+  border: 0px solid;
+  border-radius: 0px 0px 0px 30px; }
+
+.imgseg {
+  animation: rotation 2s infinite linear; }
+
+.imgseg img {
+  border: 0px solid;
+  border-radius: 0px 0px 30px 0px; }
 
 .buttonsec {
   padding: 4px;
   margin-top: 10px;
-  background-color: #5390D9; }
-  .buttonsec a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1em; }
-    .buttonsec a:hover {
-      color: #000; }
-  .buttonsec:hover {
-    background-color: #80FFDB;
-    cursor: pointer;
-    transform: scale(1.03); }
+  background-color: #5390D9;
+  border-radius: 15px 0px 15px 0px;
+  border-color: #000;
+  padding: 0.5em; }
 
+.buttonsec1 {
+  padding: 4px;
+  margin-top: 10px;
+  background-color: #5390D9;
+  border-radius: 0px 15px 0px 15px;
+  border-color: #fff;
+  padding: 0.5em; }
+
+.buttonsec a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em; }
+
+.buttonsec1 a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em; }
+
+.buttonsec:hover {
+  background-color: #80FFDB;
+  cursor: pointer;
+  transform: scale(1.03); }
+
+.buttonsec1:hover {
+  background-color: #80FFDB;
+  cursor: pointer;
+  transform: scale(1.03); }
+
+.buttonsec a:hover {
+  color: #000; }
+
+/*SECCION UX UI*/
 #pantalla-divididauxui {
   display: flex;
   flex-direction: row; }
@@ -459,6 +467,11 @@ input[type=submit] {
   color: #fff;
   border: blanchedalmond solid 3px; }
 
+.webdevright__title {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em; }
+
 .uxuisec {
   display: flex;
   background-color: #000;
@@ -473,29 +486,31 @@ input[type=submit] {
   color: #000;
   margin: 1em; }
 
+/* FOOTER */
 footer {
   position: relative;
   width: auto;
   height: auto;
   padding: 50px 100px;
   background-color: #008a93; }
-  footer h2 {
-    position: relative;
-    margin-bottom: 15px; }
-    footer h2::before {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0%;
-      width: 50%;
-      height: 2px;
-      background-color: #83b3d3; }
 
 .footer {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px; }
+
+footer h2 {
+  position: relative;
+  margin-bottom: 15px; }
+  footer h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+    width: 50%;
+    height: 2px;
+    background-color: #83b3d3; }
 
 .fredes {
   margin-top: 20px;
@@ -551,6 +566,7 @@ footer {
   color: #2f4f4f;
   padding: 5px; }
 
+/* MOBILE FIRST */
 @media (max-width: 320px) {
   .index__title1 {
     font-size: 8em; }
@@ -561,10 +577,14 @@ footer {
     width: auto;
     position: relative;
     height: auto;
-    padding: 50px 100px;
     margin: 0%;
     padding: 0%;
-    grid-template-columns: repeat(1, 1fr); }
+    display: flex;
+    flex-direction: column; }
+  .footer h2 {
+    text-align: center; }
+  .footer li {
+    text-align: center; }
   .copyrightText {
     padding: 8px 40px; }
   body {
@@ -574,20 +594,17 @@ footer {
   .pantalla-dividida {
     display: flex;
     flex-direction: column; }
-  .parteizquierda {
+  .parteizquierda, .partederecha {
     width: 100%; }
-  .partederecha {
+  /* UXUIDESING */
+  .uxuileft, .uxuiright {
     width: 100%; }
-  .uxuileft {
-    width: 100%; }
-  .uxuiright {
-    width: 100%; }
+  /* WEBDEV */
   #pantalla-divididauxui {
     flex-direction: column; }
-  .webdevright {
+  .webdevright, .webdevimg {
     width: 100%; }
-  .webdevimg {
-    width: 100%; }
+  /* CIBERSEGURIDAD */
   .cibers {
     flex-direction: column;
     margin: 0; }
@@ -618,6 +635,7 @@ footer {
   .imgseg {
     display: flex;
     justify-content: center; }
+  /*FOOTER*/
   .footer {
     background-color: #008a93;
     width: auto;
@@ -625,4 +643,9 @@ footer {
     height: auto;
     margin: 0%;
     padding: 5px;
-    grid-template-columns: repeat(2, 1fr); } }
+    display: flex;
+    flex-direction: column; }
+  .footer h2 {
+    text-align: center; }
+  .footer li {
+    text-align: center; } }
