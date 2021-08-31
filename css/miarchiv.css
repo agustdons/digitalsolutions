@@ -7,59 +7,122 @@ html {
   padding: 0em; }
 
 body {
-  background: linear-gradient(45deg, #80FFDB 54%, #5390D9 46%);
-  font-family: sans-serif Georgia, 'Times New Roman', Times, serif; }
+  font-family: sans-serif Georgia, 'Times New Roman', Times, serif;
+  text-align: justify; }
 
 /* ENCABEZADO */
 .bg-light {
   background-color: #000 !important; }
 
-.nav-item dropdown {
-  color: blanchedalmond; }
-
 .dropdown-menu {
-  background-color: blanchedalmond !important;
   background-color: #000 !important; }
 
 nav a {
-  color: blanchedalmond !important; }
+  color: #fff !important; }
+
+nav a:hover {
+  color: #FA7016 !important;
+  cursor: pointer !important; }
+
+.dropdown-menu a:hover {
+  color: #FA7016 !important;
+  cursor: pointer !important;
+  background-color: #fff !important; }
 
 /* SECCION INICIO */
-.index__title1 {
-  font-size: 13em; }
+.home__text {
+  color: #FA7016; }
 
-.index__title2 {
-  padding: 1.5em;
+.wrapper {
+  display: flex;
+  position: absolute;
+  color: #FA7016;
+  padding-left: 2em;
+  top: 400px;
   font-size: 3em;
-  margin: 0%; }
+  left: 200px; }
 
-.index__title3 {
-  background-color: #5390D9;
+.wrapper .static-txt {
+  color: #FA7016;
+  font-size: 60px;
+  font-weight: 400; }
+
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden; }
+
+.dynamic-txts li {
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
   position: relative;
-  color: #fff; }
-  .index__title3:after {
-    content: "";
-    border-left: 0px solid black;
-    background: #5390D9;
-    right: 0;
-    height: 100%;
-    position: absolute;
-    animation: indextitle3 2s infinite alternate steps(18); }
+  top: 0;
+  color: #FA7016;
+  animation: slide 12s steps(4) infinite; }
 
-@keyframes indextitle3 {
-  from {
-    width: 100%; }
-  to {
-    width: 0; } }
+.dynamic-txts span {
+  color: #FA7016; }
+
+@keyframes slide {
+  100% {
+    top: -360px; } }
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px; }
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background: #000;
+  border-left: 2px solid #FA7016;
+  animation: typing 3s steps(10) infinite; }
+
+@keyframes typing {
+  40%, 60% {
+    left: calc(100% + 30px); }
+  100% {
+    left: 0; } }
+
+.home {
+  position: relative; }
+
+.home__title1 {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  color: white;
+  padding-left: 10em;
+  top: 100px; }
+
+.home__title2 {
+  position: absolute;
+  display: flex;
+  color: white;
+  padding-left: 2em;
+  top: 200px;
+  font-size: 6em;
+  left: 0px; }
+
+.index2 {
+  display: flex;
+  padding: 1.5em;
+  font-size: 2.5em;
+  background-color: #fff; }
+
+.index2 h2 {
+  color: #FA7016;
+  text-transform: uppercase; }
 
 .index2 p {
-  display: flex;
-  text-align: center;
-  padding: 1.5em;
-  font-size: 2.5em; }
-
-.index3 {
-  text-align: center; }
+  font-size: 30px;
+  text-align: justify; }
 
 .index3__titile {
   text-align: center; }
@@ -73,45 +136,6 @@ nav a {
   justify-content: center;
   width: 100%;
   height: 100vh; }
-
-.chevron {
-  position: absolute;
-  width: 2.1rem;
-  height: 0.48rem;
-  opacity: 0;
-  transform: scale(0.3);
-  animation: move-chevron 2s ease-out infinite; }
-  .chevron:first-child {
-    animation: move-chevron 2s ease-out 1s infinite; }
-  .chevron:nth-child(2) {
-    animation: move-chevron 2s ease-out 2s infinite; }
-  .chevron:before, .chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background: #2c3e50; }
-  .chevron:before {
-    left: 0;
-    transform: skewY(30deg); }
-  .chevron:after {
-    right: 0;
-    width: 50%;
-    transform: skewY(-30deg); }
-
-@keyframes move-chevron {
-  25% {
-    opacity: 1; }
-  33.3% {
-    opacity: 1;
-    transform: translateY(2.28rem); }
-  66.6% {
-    opacity: 1;
-    transform: translateY(3.12rem); }
-  100% {
-    opacity: 0;
-    transform: translateY(4.8rem) scale(0.5); } }
 
 .card__imagehome {
   height: 700px;
@@ -132,14 +156,14 @@ nav a {
   display: flex;
   justify-content: center; }
   .arriba i {
-    color: white; }
+    color: #000; }
     .arriba i:hover {
-      color: #000;
+      color: #FA7016;
       cursor: pointer;
       transform: scale(1.03);
       transition: all 1s ease; }
 
-/* SECCION Our Professionals */
+/* SECCION PROFESIONALES */
 .wtitle1, .wtitle2 {
   text-align: center;
   padding-top: 2em; }
@@ -182,6 +206,9 @@ nav a {
   background-size: cover;
   border-radius: 15px 15px 0 0; }
 
+.card p {
+  text-align: justify; }
+
 .card__1 {
   background-image: url(../imagenes/worker1.jpg); }
 
@@ -210,108 +237,158 @@ nav a {
   background-image: url(../imagenes/worker9.jpg); }
 
 /*SECCION CONOCENOS*/
-.container4 {
-  margin: 1em;
-  background-color: #fff;
-  box-shadow: 10px 5px 5px black; }
-
-.container4__title {
-  text-align: center;
-  color: #fff;
-  border: solid 3px;
-  background-color: #000; }
-
-.container4 p {
-  margin-left: 1em; }
-
-.image12 {
-  width: 100%;
-  height: 80%; }
-
-.iconosc ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin-top: 2em;
-  justify-content: space-around;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
-  margin-bottom: 2em; }
-
-/* SECCION DE CONTACTO*/
-.parteizquierda {
-  background-color: #000;
-  height: 105vh;
-  width: 50%;
-  padding: 1rem; }
-
-.parteizquierda h2 {
-  color: #fff;
-  margin-top: 1em; }
-
-.partederecha {
-  background-image: url(../imagenes/contactofondo.jpeg);
-  background-position: center;
-  background-size: cover;
-  width: 50%;
-  height: 105vh;
-  padding: 1rem; }
-
-.pantalla-dividida {
+.aboutus1 {
   display: flex; }
 
-/* FORMULARIO CONTACTO */
-input[type=text], select, textarea {
+.container4 {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  width: 50%; }
+
+.container4 h4 {
+  padding-top: 5em;
+  margin-left: 1em; }
+
+.container4 h1 {
+  font-size: 5em;
+  text-align: center;
+  padding-top: 1.5em; }
+
+.container4 p {
+  padding-top: 3em;
+  margin: 1em;
+  font-size: 1.5em; }
+
+.aboutbutton a {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #000;
+  margin-left: 10em;
+  margin-right: 10em;
+  text-align: center;
+  font-size: 1.5em; }
+
+.aboutbutton a:hover {
+  color: #FA7016; }
+
+.aboutus2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 50px;
+  width: auto;
+  padding: 2em; }
+
+.aboutus2 h3 {
+  text-align: center; }
+
+.aboutus2 p {
+  padding: 5px; }
+
+.cardabout {
+  box-shadow: 12px 0 12px -4px #3e3e3e, -12px 0 10px -4px #3e3e3e; }
+
+.cardabout img {
+  display: block;
+  margin: auto; }
+
+/* SECCION DE CONTACTO*/
+.contact1 {
+  background-image: url(/imagenes/aboutus1.jpg);
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical; }
+  background-size: 100% 1000px;
+  background-repeat: no-repeat; }
 
-input[type=submit] {
-  background-color: #80FFDB;
-  color: white;
-  padding: 12px 20px;
+/*Formulario*/
+ul {
+  list-style: none; }
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+  color: #fff; }
+
+.contact-form {
+  background: #222222;
+  opacity: 0.9;
+  width: 50%; }
+
+.contact-form form label {
+  display: block; }
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+  color: #fff; }
+
+.contact-form form .block {
+  grid-column: 1 / 3; }
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: .7em;
   border: none;
-  border-radius: 4px;
-  cursor: pointer; }
-  input[type=submit]:hover {
-    background-color: #008a93; }
+  background: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #FA7016; }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px; }
+.contact-form form button {
+  background: #FA7016;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em; }
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: #fff;
+  color: #000;
+  transition: background-color 1s ease-out;
+  outline: 0; }
+
+/* CONTACT INFO */
+.contact-info {
+  background: #222222;
+  opacity: 0.9; }
+
+.contact-info h4 {
+  padding-top: 1em; }
+
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: #fff; }
+
+.derechac {
+  width: 50%;
+  background: #222222;
+  opacity: 0.9;
+  border-left: 0.5px #FA7016 solid; }
+
+.maps {
+  display: flex;
+  justify-content: center; }
+
+.tituloscontacto {
+  text-align: center;
+  background: #222222;
+  opacity: 0.9;
+  color: #fff; }
+
+.contact2 {
+  display: flex;
+  padding: 4em; }
 
 .container5 {
   display: flex;
   justify-content: center;
-  justify-content: space-evenly;
-  margin-top: 1em; }
-  .container5 i {
-    color: #000;
-    padding-bottom: 10px; }
+  justify-content: space-around;
+  padding-top: 1em; }
 
-.tituloscontacto {
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  border: blanchedalmond solid 3px; }
-
-.formulario {
-  border-radius: 5em;
-  color: #fff; }
-
-.formulario__title h2 {
-  text-align: center;
-  margin-top: 1em; }
-
-.formulario__title p {
-  margin-top: 2em;
-  margin-left: 1em; }
+.container5 a:hover {
+  color: #FA7016; }
 
 /*SECCIONES DE SOLUCIONES*/
 /*WEB DEV*/
@@ -385,7 +462,7 @@ input[type=submit] {
   margin: 3em; }
 
 .segserv2:hover {
-  background-color: blanchedalmond;
+  background-color: #FA7016;
   color: #000;
   cursor: pointer;
   transform: scale(1.03);
@@ -405,7 +482,7 @@ input[type=submit] {
 .buttonsec {
   padding: 4px;
   margin-top: 10px;
-  background-color: #5390D9;
+  background-color: #000;
   border-radius: 15px 0px 15px 0px;
   border-color: #000;
   padding: 0.5em; }
@@ -413,9 +490,9 @@ input[type=submit] {
 .buttonsec1 {
   padding: 4px;
   margin-top: 10px;
-  background-color: #5390D9;
+  background-color: #FA7016;
   border-radius: 0px 15px 0px 15px;
-  border-color: #fff;
+  border-color: #000;
   padding: 0.5em; }
 
 .buttonsec a {
@@ -425,26 +502,28 @@ input[type=submit] {
 
 .buttonsec1 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 1em; }
 
 .buttonsec:hover {
-  background-color: #80FFDB;
+  background-color: #FA7016;
   cursor: pointer;
   transform: scale(1.03); }
 
 .buttonsec1:hover {
-  background-color: #80FFDB;
+  background-color: #000;
   cursor: pointer;
   transform: scale(1.03); }
+
+.buttonsec1 a:hover {
+  color: #fff; }
 
 .buttonsec a:hover {
   color: #000; }
 
 /*SECCION UX UI*/
 #pantalla-divididauxui {
-  display: flex;
-  flex-direction: row; }
+  display: flex; }
 
 .uxuiright {
   background-color: #000;
@@ -487,12 +566,24 @@ input[type=submit] {
   margin: 1em; }
 
 /* FOOTER */
+.aboutus p {
+  text-align: justify; }
+
 footer {
   position: relative;
   width: auto;
   height: auto;
   padding: 50px 100px;
-  background-color: #008a93; }
+  background-color: #000; }
+
+.footer p, a, span, ul {
+  color: #fff; }
+
+.footer ul {
+  color: #fff; }
+
+.footer h2 {
+  color: #FA7016; }
 
 .footer {
   width: 100%;
@@ -531,7 +622,7 @@ footer h2 {
       .fredes li a:hover {
         background: blanchedalmond; }
       .fredes li a .fa {
-        color: black;
+        color: #FA7016;
         font-size: 20px; }
 
 .faccesos {
@@ -541,12 +632,12 @@ footer h2 {
     margin-bottom: 10px;
     text-decoration: none; }
     .faccesos li:hover {
-      color: blanchedalmond; }
+      color: #FA7016; }
   .faccesos a {
     text-decoration: none;
-    color: black; }
+    color: #fff; }
     .faccesos a:hover {
-      color: blanchedalmond; }
+      color: #FA7016; }
 
 .info {
   position: relative; }
@@ -556,14 +647,14 @@ footer h2 {
     margin-bottom: 16px; }
   .info a {
     text-decoration: none;
-    color: black; }
+    color: #fff; }
     .info a:hover {
-      color: blanchedalmond; }
+      color: #FA7016; }
 
 .copyrightText {
   background-color: #000;
   text-align: center;
-  color: #2f4f4f;
+  color: #FA7016;
   padding: 5px; }
 
 /* MOBILE FIRST */
