@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 html {
   scroll-behavior: smooth; }
 
@@ -118,24 +119,32 @@ nav a:hover {
 
 .index2 h2 {
   color: #FA7016;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2em; }
 
 .index2 p {
   font-size: 30px;
   text-align: justify; }
 
-.index3__titile {
-  text-align: center; }
-  .index3__titile a {
-    text-decoration: none;
-    text-align: center;
-    color: #fff; }
+.index2 span {
+  padding-left: 6em; }
 
-.containerr {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh; }
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  color: #FA7016;
+  font-size: 21px;
+  background: #fff;
+  padding: 10px 20px 10px 20px;
+  border: solid #FA7016 1px;
+  text-decoration: none; }
+
+.index2 span a {
+  text-decoration: none;
+  color: #FA7016; }
 
 .card__imagehome {
   height: 700px;
@@ -198,16 +207,14 @@ nav a:hover {
   .card h2, .card h5 {
     text-align: center; }
   .card p {
-    margin-left: 1em; }
+    margin: 1em;
+    text-align: justify; }
 
 .card__image {
-  height: 700px;
-  margin-bottom: 15px;
+  height: 900px;
+  background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px 15px 0 0; }
-
-.card p {
-  text-align: justify; }
 
 .card__1 {
   background-image: url(../imagenes/worker1.jpg); }
@@ -258,19 +265,27 @@ nav a:hover {
   margin: 1em;
   font-size: 1.5em; }
 
-.aboutbutton a {
-  padding: 1em;
+.aboutbutton, .aboutbutton a {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  background-color: #000;
-  margin-left: 10em;
-  margin-right: 10em;
-  text-align: center;
-  font-size: 1.5em; }
+  color: #fff; }
 
-.aboutbutton a:hover {
-  color: #FA7016; }
+.btn1 {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Georgia;
+  color: #000;
+  font-size: 21px;
+  background: transparent;
+  padding: 10px 20px 10px 20px;
+  border: solid #000 1px;
+  text-decoration: none; }
+
+.btn1:hover {
+  background: #FA7016;
+  text-decoration: none; }
 
 .aboutus2 {
   display: grid;
@@ -419,11 +434,78 @@ ul {
   padding-top: 3em;
   padding-bottom: 2em; }
 
+/*SECCION UX UI*/
+.uxuiimage {
+  background-image: url(/imagenes/uxuiback.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 7em;
+  background-size: cover; }
+
+.uxui__title {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+  font-size: 4em; }
+
+.uxuisec {
+  display: flex;
+  box-shadow: -5px 0px 10px 1px #000;
+  border-radius: 0px 30px 0px 30px;
+  margin: 3em; }
+
+.uxuisec:hover, .uxuisec1:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease; }
+
+.uxuisec h2, .uxuisec1 h2 {
+  text-align: center;
+  color: #000;
+  margin-top: 1em; }
+
+.uxuisec p, .uxuisec1 p {
+  text-align: justify;
+  color: #000;
+  margin: 2em; }
+
+.uxuisec img {
+  border: 0px solid;
+  border-radius: 0px 0px 0px 30px; }
+
+.uxuisec1 img {
+  border: 0px solid;
+  border-radius: 0px 0px 30px 0px; }
+
+.uxuisec1 {
+  display: flex;
+  box-shadow: 5px 1px 5px 0px #000;
+  border-radius: 30px 0px 30px 0px;
+  margin: 3em; }
+
+.backuxuicolor {
+  background: linear-gradient(0deg, #FF813A 76%, #FAFAFA 100%); }
+
+.uxuititle {
+  text-align: center;
+  color: #000; }
+
+.arribaux {
+  display: flex;
+  justify-content: center; }
+
+.arribaux:hover i {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+  color: #000; }
+
 /*SECCION CIBERSEGURIDAD*/
 .cibers {
   display: flex;
-  background: #5390d9;
-  background: linear-gradient(0deg, #5390d9 0%, black 48%);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
   color: #fff; }
 
 .cibers__title {
@@ -433,36 +515,46 @@ ul {
 .cibers p {
   margin: 5px; }
 
+.cibers iframe {
+  display: flex;
+  justify-content: center; }
+
 .cibers__title1 {
   text-align: center;
   background-color: #000;
   color: #fff;
-  border: blanchedalmond solid 3px; }
+  border-top: #fff solid 3px; }
 
 .segserv1 {
   display: flex;
+  text-align: center;
   background-color: #fff;
   box-shadow: 10px 5px 5px black;
   border-radius: 30px 0px 30px 0px;
   margin: 3em; }
 
+.segserv1 p, .segserv2 p {
+  text-align: justify;
+  margin: 1em; }
+
 .segserv1:hover {
-  background-color: #3e3e3e;
-  color: blanchedalmond;
+  background-color: #FA7016;
+  color: #000;
   cursor: pointer;
   transform: scale(1.03);
   transition: all 1s ease; }
 
 .segserv2 {
   display: flex;
+  text-align: center;
   background-color: #000;
-  box-shadow: 10px 5px 5px #fff;
+  box-shadow: -5px 0px 10px 1px #000;
   border-radius: 0px 30px 0px 30px;
   color: #fff;
   margin: 3em; }
 
 .segserv2:hover {
-  background-color: #FA7016;
+  background-color: #fff;
   color: #000;
   cursor: pointer;
   transform: scale(1.03);
@@ -487,83 +579,35 @@ ul {
   border-color: #000;
   padding: 0.5em; }
 
-.buttonsec1 {
-  padding: 4px;
-  margin-top: 10px;
-  background-color: #FA7016;
-  border-radius: 0px 15px 0px 15px;
-  border-color: #000;
-  padding: 0.5em; }
+.buttonsec:hover {
+  background-color: #000;
+  cursor: pointer;
+  transform: scale(1.03); }
 
 .buttonsec a {
   text-decoration: none;
   color: #fff;
   font-size: 1em; }
 
+.buttonsec1 {
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 0px 15px 0px 15px;
+  border-color: #fff;
+  padding: 0.5em; }
+
+.buttonsec1:hover {
+  background-color: #fff;
+  cursor: pointer;
+  transform: scale(1.03); }
+
 .buttonsec1 a {
   text-decoration: none;
   color: #000;
   font-size: 1em; }
 
-.buttonsec:hover {
-  background-color: #FA7016;
-  cursor: pointer;
-  transform: scale(1.03); }
-
-.buttonsec1:hover {
-  background-color: #000;
-  cursor: pointer;
-  transform: scale(1.03); }
-
-.buttonsec1 a:hover {
-  color: #fff; }
-
-.buttonsec a:hover {
-  color: #000; }
-
-/*SECCION UX UI*/
-#pantalla-divididauxui {
-  display: flex; }
-
-.uxuiright {
-  background-color: #000;
-  width: 50%;
-  padding: 1rem;
-  color: #fff;
-  border: solid 2px #fff; }
-
-.uxuileft {
-  background-image: url(/imagenes/uxuisec.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 50%;
-  padding: 1rem;
-  border: solid 2px #fff; }
-
-.uxuititle {
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  border: blanchedalmond solid 3px; }
-
-.webdevright__title {
-  text-align: center;
-  padding-top: 3em;
-  padding-bottom: 2em; }
-
-.uxuisec {
-  display: flex;
-  background-color: #000;
-  box-shadow: 10px 5px 5px #fff;
-  color: #fff;
-  margin: 1em; }
-
-.uxuisec1 {
-  display: flex;
-  background-color: #fff;
-  box-shadow: 10px 5px 5px #000;
-  color: #000;
-  margin: 1em; }
+.sectitle1 {
+  text-align: center; }
 
 /* FOOTER */
 .aboutus p {
@@ -652,7 +696,7 @@ footer h2 {
       color: #FA7016; }
 
 .copyrightText {
-  background-color: #000;
+  background-color: #3e3e3e;
   text-align: center;
   color: #FA7016;
   padding: 5px; }
