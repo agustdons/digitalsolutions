@@ -371,6 +371,14 @@ html {
 	  padding: 2em;
   }
 
+  .cardabout:hover{
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+	transform: scale(1.03);
+	transition: all 1s ease;
+  }
+
   .aboutus2 h3{
 	  text-align: center;
   }
@@ -387,10 +395,11 @@ html {
 	  display: block;
 	  margin: auto;
   }
+  
   /* SECCION DE CONTACTO*/
   
   .contact1{
-	background-image: url(/imagenes/aboutus1.jpg);
+	background-image: url(../imagenes/aboutus1.jpg);
 	width: 100%;
 	background-size: 100% 1000px;
 	background-repeat: no-repeat;
@@ -510,6 +519,14 @@ html {
 
   /*SECCIONES DE SOLUCIONES*/
   /*WEB DEV*/
+
+  .webdevback{
+	background-image: url(../imagenes/webdevback.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	padding: 7em;
+	background-size: cover;
+}
   
   .webdevright {
 	background-color: #000;
@@ -531,9 +548,7 @@ html {
   
   .webtitle1 {
 	text-align: center;
-	background-color: #000;
-	color: #fff;
-	border: blanchedalmond solid 3px;
+	color: #000;
   }
   
   .webdevright__title {
@@ -668,7 +683,7 @@ html {
   }
 
   .segserv1:hover {
-	background-color: #FA7016;
+	background-color: #fff;
 	color: #000;
 	cursor: pointer;
 	transform: scale(1.03);
@@ -678,10 +693,10 @@ html {
   .segserv2{
 	display: flex;
 	text-align: center;
-	background-color: #000;
+	background-color: #fff;
 	box-shadow: -5px 0px 10px 1px #000;
 	border-radius: 0px 30px 0px 30px;
-	color: #fff;
+	color: #000;
 	margin: 3em;
   }
 
@@ -883,66 +898,253 @@ html {
   /* MOBILE FIRST */
 
   @media (max-width: 320px) {
-	.index__title1 {
-	  font-size: 8em;
+
+	 /* INICIO */
+
+	.index2{
+		display: flex;
+		flex-direction: column;
 	}
-  
+
+	.index2 h2{
+		font-size: 1em;
+	}
+
 	.index2 p{
-	  font-size: 1em;
-  
+		font-size: 0.5em;
 	}
-  
-	.footer {
-	  background-color: #008a93;
-	  width: auto;
+	 .index2 img{
+		width: auto;
+	}
+
+	.home__text{
+	  color: #FA7016;
+  }
+
+  .wrapper{
+	display: flex;
+	position: absolute;
+	color: #FA7016;
+	padding-left: 1em;
+	top: 0;
+	bottom: 0px;
+	font-size: 5px;
+	left: 0px;
+  }
+
+  .wrapper .static-txt{
+	  color: #FA7016;
+	  font-size: 60px;
+	  font-weight: 400;
+  }
+
+  .wrapper .dynamic-txts{
+	  margin-left: 15px;
+	  height: 90px;
+	  line-height: 90px;
+	  overflow: hidden;
+  }
+
+  .dynamic-txts li{
+	  list-style: none;
+	  font-size: 5em;
+	  font-weight: 500;
 	  position: relative;
-	  height: auto;
-	  margin: 0%;
-	  padding: 0%;
-	  display: flex;
-	  flex-direction: column;
-	}
+	  top: 0;
+	  bottom: 0;
+	  color: #FA7016;
+	  animation: slide 12s steps(4) infinite;
+  }
 
-	.footer h2{
-		text-align: center;
-	}
+  .dynamic-txts span{
+	  color: #FA7016;
+  }
 
-	.footer li{
-		text-align: center;
-	}
+  @keyframes slide {
+	  100%{
+		  top: -360px;
+	  }
+  }
   
-	.copyrightText {
-	  padding: 8px 40px;
-	}
-  
-	body {
-	  font-size: 5vw;
-	}
-  
-	.container1 {
-	  width: auto;
-	}
-  
-	.pantalla-dividida {
-	  display: flex;
-	  flex-direction: column;
-	}
-  
-	.parteizquierda, .partederecha {
+  .dynamic-txts li span{
+	position: relative;
+	margin: 5px 0;
+	line-height: 90px;
+	top: 0px;
+	bottom: 100px;
+  }
+
+  .dynamic-txts li span::after{
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  height: 110%;
 	  width: 100%;
-	}
+	  background: #000;
+	  border-left: 0px solid #FA7016;
+	  animation: typing 3s steps(10) infinite;
+	  display: none;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+  .home__title1{
+	  position: absolute;
+	  top: 0%;
+	  display: flex;
+	  color: white;
+	  padding-left: 0.5em;
+	  top: 0px;
+	  display: none;
+  }
+
+  .home__title2{
+	display: none;
+}
   
+  .index2 {
+	display: flex;
+	padding: 1.5em;
+	font-size: 2.5em;
+	background-color: #fff;
+  }
+
+  .index2 span{
+	  padding-left: 0em;
+  }
+
+  .btn {
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: Courier New;
+	color: #FA7016;
+	font-size: 21px;
+	background: #fff;
+	padding: 10px 20px 10px 20px;
+	border: solid #FA7016 1px;
+	text-decoration: none;
+  }
+
+  .index2 span a{
+	  text-decoration: none;
+	  color: #FA7016;
+  }
+
+	/* CONTACTO */
+
+	/* SECCION DE CONTACTO*/
+  
+	.contact1{
+		background-color: #000;
+		background-image: none;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.logo {
+		font-size: 2em;
+		}
+	
+	.contact-form {
+		opacity: 0.9;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		}
+
+	/* CONTACT INFO */
+	
+		.contact-info {
+		background: #222222;
+		opacity: 0.9;
+		}
+	
+		.contact-info h4{
+			padding-top: 1em;
+		}
+	
+		.contact-info h4, .contact-info ul, .contact-info p {
+		text-align: center;
+		margin: 0 0 1rem 0;
+		color: #fff;
+		}
+	
+		.derechac{
+			width: 100%;
+			background: #222222;
+			opacity: 0.9;
+			border-left: none;
+			border-top: 0.5px #FA7016 solid;
+		}
+	
+		.tituloscontacto {
+		text-align: center;
+		background: #222222;
+		opacity: 0.9;
+		color: #fff;
+	  }
+	
+	  .contact2{
+		  display: flex;
+		  padding: 1em;
+	  }
+	
+	  .container5{
+		background:linear-gradient(0deg, #FF813A 76%, #000 100%);
+	}
+	
+	  .container5 a:hover{
+		  color: #FA7016;
+	  }
+
   
 	/* UXUIDESING */
 	
-	.uxuileft, .uxuiright{
-	width: 100%;
-	}
-  
+	.uxuiimage {
+		background-image: url(../imagenes/uxuiback.jpg);
+		width: auto;
+		padding-bottom: 7em;
+	  }
+	  
+	  .uxui__title {
+		color: #fff;
+	  }
+	  
+	  .uxuisec{
+		margin: 1em;
+	  }
+	
+	  .uxuisec img{
+		display: none;
+	  }
+	
+	  .uxuisec1 img{
+		display: none;
+	  }
+	  
+	  .uxuisec1{
+		margin: 1em;
+	  }
+	
 	/* WEBDEV */
-  
-	#pantalla-divididauxui{
-	  flex-direction: column;
+
+	.pantalla-dividida {
+		display: flex;
+		flex-direction: column;
 	  }
 	
 	.webdevright, .webdevimg{
@@ -950,18 +1152,19 @@ html {
 	  }
   
 	/* CIBERSEGURIDAD */
+
+	.container1 {
+		width: auto;
+	  }
   
    .cibers{
 	 flex-direction: column;
 	 margin: 0;
    }
   
-   .segserv1{
+   .segserv1, .segserv2{
 	 flex-direction: column;
-   }
-  
-   .segserv2{
-	 flex-direction: column;
+	 margin: 3em;
    }
   
    .segserv3{
@@ -972,9 +1175,104 @@ html {
 	 flex-direction: column;
    }
   
-   .imgseg{
+   .imgseg img{
 	 display: none;
    }
+
+   .imgseg2 img{
+	   display: none;
+   }
+
+   /* SECCION QUIENES SOMOS */
+
+   .aboutus1{
+	   display: flex;
+	   flex-direction: column;
+   }
+
+   .container4{
+	   width: 100%;
+   }
+
+   .container4 h4{
+	   font-size: 1em;
+	   text-align: center;
+	   padding-top: 4em;
+	   margin: 0;
+   }
+
+   .container4 h1{
+	   font-size: 3.5em;
+	   text-align: center;
+   }
+
+   .container4 p{
+	   font-size: 1em;
+   }
+
+   .btn1{
+	   margin-bottom: 1em;
+	   padding: 0.4em;
+   }
+
+   .aboutus1 img{
+	   display: none;
+   }
+
+   .aboutus2{
+	   display: flex;
+	   flex-direction: column;
+   }
+
+   .cardabout{
+	   margin-bottom: 1.5em;
+   }
+
+    /* FOOTER */
+
+	.footer {
+		width: auto;
+		position: relative;
+		height: auto;
+		margin: 0%;
+		padding: 0%;
+		display: flex;
+		flex-direction: column;
+	  }
+  
+	  footer h2 {
+		  position: relative;
+		  margin-bottom: 15px;
+		
+		  &::before {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0%;
+			width: 50%;
+			height: 2px;
+			background-color: #83b3d3;
+			vertical-align: middle;
+			display: none;
+		  }
+		}
+  
+	  .footer h2{
+		  text-align: center;
+	  }
+  
+	  .footer li{
+		  text-align: center;
+	  }
+	
+	  .copyrightText {
+		padding: 8px 40px;
+	  }
+	
+	  body {
+		font-size: 5vw;
+	  }
+	
 }
 
 @media (max-width: 768px){
@@ -1007,7 +1305,6 @@ html {
   
 	/*FOOTER*/
 	.footer {
-	  background-color: #008a93;
 	  width: auto;
 	  position: relative;
 	  height: auto;
