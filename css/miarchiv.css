@@ -13,18 +13,14 @@ body {
   text-align: justify; }
 
 /* ENCABEZADO */
-.bg-light {
-  background-color: #000 !important; }
-
-.dropdown-menu {
+.bg-light, .dropdown-menu {
   background-color: #000 !important; }
 
 nav a {
   color: #fff !important; }
-
-nav a:hover {
-  color: #FA7016 !important;
-  cursor: pointer !important; }
+  nav a:hover {
+    color: #FA7016 !important;
+    cursor: pointer !important; }
 
 .dropdown-menu a:hover {
   color: #FA7016 !important;
@@ -43,17 +39,15 @@ nav a:hover {
   top: 400px;
   font-size: 3em;
   left: 200px; }
-
-.wrapper .static-txt {
-  color: #FA7016;
-  font-size: 60px;
-  font-weight: 400; }
-
-.wrapper .dynamic-txts {
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden; }
+  .wrapper .static-txt {
+    color: #FA7016;
+    font-size: 60px;
+    font-weight: 400; }
+  .wrapper .dynamic-txts {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden; }
 
 .dynamic-txts li {
   list-style: none;
@@ -67,24 +61,23 @@ nav a:hover {
 .dynamic-txts span {
   color: #FA7016; }
 
-@keyframes slide {
-  100% {
-    top: -360px; } }
-
 .dynamic-txts li span {
   position: relative;
   margin: 5px 0;
   line-height: 90px; }
+  .dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid #FA7016;
+    animation: typing 3s steps(10) infinite; }
 
-.dynamic-txts li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 110%;
-  width: 100%;
-  background: #000;
-  border-left: 2px solid #FA7016;
-  animation: typing 3s steps(10) infinite; }
+@keyframes slide {
+  100% {
+    top: -360px; } }
 
 @keyframes typing {
   40%, 60% {
@@ -117,19 +110,16 @@ nav a:hover {
   padding: 1.5em;
   font-size: 2.5em;
   background-color: #fff; }
-
-.index2 h2 {
-  color: #FA7016;
-  text-transform: uppercase;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 2em; }
-
-.index2 p {
-  font-size: 30px;
-  text-align: justify; }
-
-.index2 span {
-  padding-left: 6em; }
+  .index2 h2 {
+    color: #FA7016;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em; }
+  .index2 p {
+    font-size: 30px;
+    text-align: justify; }
+  .index2 span {
+    padding-left: 6em; }
 
 .btn {
   -webkit-border-radius: 28;
@@ -251,26 +241,28 @@ nav a:hover {
 .container4 {
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
   width: 50%; }
+  .container4 h4 {
+    padding-top: 5em;
+    margin-left: 1em; }
+  .container4 h1 {
+    font-size: 5em;
+    text-align: center;
+    padding-top: 1.5em; }
+  .container4 p {
+    padding-top: 3em;
+    margin: 1em;
+    font-size: 1.5em; }
 
-.container4 h4 {
-  padding-top: 5em;
-  margin-left: 1em; }
-
-.container4 h1 {
-  font-size: 5em;
-  text-align: center;
-  padding-top: 1.5em; }
-
-.container4 p {
-  padding-top: 3em;
-  margin: 1em;
-  font-size: 1.5em; }
-
-.aboutbutton, .aboutbutton a {
+.aboutbutton {
   display: flex;
   justify-content: center;
   text-decoration: none;
   color: #fff; }
+  .aboutbutton a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff; }
 
 .btn1 {
   -webkit-border-radius: 5;
@@ -283,10 +275,9 @@ nav a:hover {
   padding: 10px 20px 10px 20px;
   border: solid #000 1px;
   text-decoration: none; }
-
-.btn1:hover {
-  background: #FA7016;
-  text-decoration: none; }
+  .btn1:hover {
+    background: #FA7016;
+    text-decoration: none; }
 
 .aboutus2 {
   display: grid;
@@ -310,10 +301,9 @@ nav a:hover {
 
 .cardabout {
   box-shadow: 12px 0 12px -4px #3e3e3e, -12px 0 10px -4px #3e3e3e; }
-
-.cardabout img {
-  display: block;
-  margin: auto; }
+  .cardabout img {
+    display: block;
+    margin: auto; }
 
 /* SECCION DE CONTACTO*/
 .contact1 {
@@ -335,54 +325,46 @@ ul {
   background: #222222;
   opacity: 0.9;
   width: 50%; }
-
-.contact-form form label {
-  display: block; }
-
-.contact-form form p {
-  margin: 0;
-  padding: 1em;
-  color: #fff; }
-
-.contact-form form .block {
-  grid-column: 1 / 3; }
-
-.contact-form form button,
-.contact-form form input,
-.contact-form form textarea {
-  width: 100%;
-  padding: .7em;
-  border: none;
-  background: none;
-  outline: 0;
-  color: #fff;
-  border-bottom: 1px solid #FA7016; }
-
-.contact-form form button {
-  background: #FA7016;
-  border: 0;
-  text-transform: uppercase;
-  padding: 1em; }
-
-.contact-form form button:hover,
-.contact-form form button:focus {
-  background: #fff;
-  color: #000;
-  transition: background-color 1s ease-out;
-  outline: 0; }
+  .contact-form form label {
+    display: block; }
+  .contact-form form p {
+    margin: 0;
+    padding: 1em;
+    color: #fff; }
+  .contact-form form .block {
+    grid-column: 1 / 3; }
+  .contact-form form button, .contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #FA7016; }
+  .contact-form form button {
+    background: #FA7016;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em; }
+    .contact-form form button:hover, .contact-form form button:focus {
+      background: #fff;
+      color: #000;
+      transition: background-color 1s ease-out;
+      outline: 0; }
 
 /* CONTACT INFO */
 .contact-info {
   background: #222222;
   opacity: 0.9; }
-
-.contact-info h4 {
-  padding-top: 1em; }
-
-.contact-info h4, .contact-info ul, .contact-info p {
-  text-align: center;
-  margin: 0 0 1rem 0;
-  color: #fff; }
+  .contact-info h4 {
+    padding-top: 1em;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #fff; }
+  .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #fff; }
 
 .derechac {
   width: 50%;
@@ -409,9 +391,8 @@ ul {
   justify-content: center;
   justify-content: space-around;
   padding-top: 1em; }
-
-.container5 a:hover {
-  color: #FA7016; }
+  .container5 a:hover {
+    color: #FA7016; }
 
 /*SECCIONES DE SOLUCIONES*/
 /*WEB DEV*/
@@ -430,20 +411,18 @@ ul {
   background: linear-gradient(90deg, #fff 15%, black 45%);
   justify-content: right;
   margin-top: 2em; }
-
-.webdev1 ul {
-  color: #fff;
-  text-align: center;
-  font-size: 1.5em;
-  padding-top: 1em;
-  font-family: 'Oswald', sans-serif; }
-
-.webdev1 h3 {
-  font-size: 2em;
-  text-align: center;
-  color: #fff;
-  padding-top: 1em;
-  font-family: 'Oswald', sans-serif; }
+  .webdev1 ul {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 1em;
+    font-family: 'Oswald', sans-serif; }
+  .webdev1 h3 {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding-top: 1em;
+    font-family: 'Oswald', sans-serif; }
 
 .webdev__title {
   text-align: center;
@@ -496,8 +475,14 @@ ul {
   box-shadow: -5px 0px 10px 1px #000;
   border-radius: 0px 30px 0px 30px;
   margin: 3em; }
+  .uxuisec:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease; }
 
-.uxuisec:hover, .uxuisec1:hover {
+.uxuisec1:hover {
   background-color: #fff;
   color: #000;
   cursor: pointer;
@@ -518,15 +503,14 @@ ul {
   border: 0px solid;
   border-radius: 0px 0px 0px 30px; }
 
-.uxuisec1 img {
-  border: 0px solid;
-  border-radius: 0px 0px 30px 0px; }
-
 .uxuisec1 {
   display: flex;
   box-shadow: 5px 1px 5px 0px #000;
   border-radius: 30px 0px 30px 0px;
   margin: 3em; }
+  .uxuisec1 img {
+    border: 0px solid;
+    border-radius: 0px 0px 30px 0px; }
 
 .backuxuicolor {
   background: linear-gradient(0deg, #FF813A 76%, #FAFAFA 100%); }
@@ -538,12 +522,11 @@ ul {
 .arribaux {
   display: flex;
   justify-content: center; }
-
-.arribaux:hover i {
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease;
-  color: #000; }
+  .arribaux:hover i {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+    color: #000; }
 
 /*SECCION CIBERSEGURIDAD*/
 .cibers {
@@ -575,8 +558,11 @@ ul {
   box-shadow: 10px 5px 5px black;
   border-radius: 30px 0px 30px 0px;
   margin: 3em; }
+  .segserv1 p {
+    text-align: justify;
+    margin: 1em; }
 
-.segserv1 p, .segserv2 p {
+.segserv2 p {
   text-align: justify;
   margin: 1em; }
 
@@ -595,13 +581,12 @@ ul {
   border-radius: 0px 30px 0px 30px;
   color: #000;
   margin: 3em; }
-
-.segserv2:hover {
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease; }
+  .segserv2:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease; }
 
 .imgseg2 img {
   border: 0px solid;
@@ -609,10 +594,9 @@ ul {
 
 .imgseg {
   animation: rotation 2s infinite linear; }
-
-.imgseg img {
-  border: 0px solid;
-  border-radius: 0px 0px 30px 0px; }
+  .imgseg img {
+    border: 0px solid;
+    border-radius: 0px 0px 30px 0px; }
 
 .buttonsec {
   padding: 4px;
@@ -621,16 +605,14 @@ ul {
   border-radius: 15px 0px 15px 0px;
   border-color: #000;
   padding: 0.5em; }
-
-.buttonsec:hover {
-  background-color: #000;
-  cursor: pointer;
-  transform: scale(1.03); }
-
-.buttonsec a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1em; }
+  .buttonsec:hover {
+    background-color: #000;
+    cursor: pointer;
+    transform: scale(1.03); }
+  .buttonsec a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em; }
 
 .buttonsec1 {
   margin-bottom: 5px;
@@ -638,16 +620,14 @@ ul {
   border-radius: 0px 15px 0px 15px;
   border-color: #fff;
   padding: 0.5em; }
-
-.buttonsec1:hover {
-  background-color: #fff;
-  cursor: pointer;
-  transform: scale(1.03); }
-
-.buttonsec1 a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1em; }
+  .buttonsec1:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transform: scale(1.03); }
+  .buttonsec1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em; }
 
 .sectitle1 {
   text-align: center; }
@@ -666,17 +646,15 @@ footer {
 .footer p, a, span, ul {
   color: #fff; }
 
-.footer ul {
-  color: #fff; }
-
-.footer h2 {
-  color: #FA7016; }
-
 .footer {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px; }
+  .footer ul {
+    color: #fff; }
+  .footer h2 {
+    color: #FA7016; }
 
 footer h2 {
   position: relative;
@@ -750,12 +728,12 @@ footer h2 {
   .index2 {
     display: flex;
     flex-direction: column; }
-  .index2 h2 {
-    font-size: 1em; }
-  .index2 p {
-    font-size: 0.5em; }
-  .index2 img {
-    width: 100%; }
+    .index2 h2 {
+      font-size: 1em; }
+    .index2 p {
+      font-size: 0.5em; }
+    .index2 img {
+      width: 100%; }
   .home__text {
     color: #FA7016; }
   .wrapper {
@@ -768,15 +746,15 @@ footer h2 {
     bottom: 0px;
     font-size: 6px;
     left: 0px; }
-  .wrapper .static-txt {
-    color: #FA7016;
-    font-size: 60px;
-    font-weight: 400; }
-  .wrapper .dynamic-txts {
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden; }
+    .wrapper .static-txt {
+      color: #FA7016;
+      font-size: 60px;
+      font-weight: 400; }
+    .wrapper .dynamic-txts {
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden; }
   .dynamic-txts li {
     list-style: none;
     font-size: 5em;
@@ -788,25 +766,25 @@ footer h2 {
     animation: slide 12s steps(4) infinite; }
   .dynamic-txts span {
     color: #FA7016; }
-  @keyframes slide {
-    100% {
-      top: -360px; } }
   .dynamic-txts li span {
     position: relative;
     margin: 5px 0;
     line-height: 90px;
     top: 0px;
     bottom: 100px; }
-  .dynamic-txts li span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 110%;
-    width: 100%;
-    background: #000;
-    border-left: 0px solid #FA7016;
-    animation: typing 3s steps(10) infinite;
-    display: none; }
+    .dynamic-txts li span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 110%;
+      width: 100%;
+      background: #000;
+      border-left: 0px solid #FA7016;
+      animation: typing 3s steps(10) infinite;
+      display: none; }
+  @keyframes slide {
+    100% {
+      top: -360px; } }
   @keyframes typing {
     40%, 60% {
       left: calc(100% + 30px); }
@@ -827,8 +805,8 @@ footer h2 {
     padding: 1.5em;
     font-size: 2.5em;
     background-color: #fff; }
-  .index2 span {
-    padding-left: 0em; }
+    .index2 span {
+      padding-left: 0em; }
   .btn {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
@@ -866,12 +844,15 @@ footer h2 {
   .contact-info {
     background: #222222;
     opacity: 0.9; }
-  .contact-info h4 {
-    padding-top: 1em; }
-  .contact-info h4, .contact-info ul, .contact-info p {
-    text-align: center;
-    margin: 0 0 1rem 0;
-    color: #fff; }
+    .contact-info h4 {
+      padding-top: 1em;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      color: #fff; }
+    .contact-info ul, .contact-info p {
+      text-align: center;
+      margin: 0 0 1rem 0;
+      color: #fff; }
   .derechac {
     width: 100%;
     background: #222222;
@@ -888,8 +869,8 @@ footer h2 {
     padding: 1em; }
   .container5 {
     background: linear-gradient(0deg, #FF813A 76%, #000 100%); }
-  .container5 a:hover {
-    color: #FA7016; }
+    .container5 a:hover {
+      color: #FA7016; }
   /* UXUIDESING */
   .uxuiimage {
     background-image: url(../imagenes/uxuiback.jpg);
@@ -899,21 +880,19 @@ footer h2 {
     color: #fff; }
   .uxuisec {
     margin: 1em; }
-  .uxuisec img {
-    display: none; }
-  .uxuisec1 img {
-    display: none; }
+    .uxuisec img {
+      display: none; }
   .uxuisec1 {
     margin: 1em; }
+    .uxuisec1 img {
+      display: none; }
   /* WEBDEV */
-  .webdevback h1 {
-    font-size: 1.5em;
-    position: absolute;
-    top: 20px; }
-  .webdev1 img {
+  .webdev__title {
     display: none; }
   .webdev1 {
     background: #000; }
+    .webdev1 img {
+      display: none; }
   /* CIBERSEGURIDAD */
   .container1 {
     width: auto; }
@@ -923,13 +902,9 @@ footer h2 {
   .segserv1, .segserv2 {
     flex-direction: column;
     margin: 3em; }
-  .segserv3 {
+  .segserv3, .segserv4 {
     flex-direction: column; }
-  .segserv4 {
-    flex-direction: column; }
-  .imgseg img {
-    display: none; }
-  .imgseg2 img {
+  .imgseg img, .imgseg2 img {
     display: none; }
   /* SECCION QUIENES SOMOS */
   .aboutus1 {
@@ -937,16 +912,16 @@ footer h2 {
     flex-direction: column; }
   .container4 {
     width: 100%; }
-  .container4 h4 {
-    font-size: 1em;
-    text-align: center;
-    padding-top: 4em;
-    margin: 0; }
-  .container4 h1 {
-    font-size: 3.5em;
-    text-align: center; }
-  .container4 p {
-    font-size: 1em; }
+    .container4 h4 {
+      font-size: 1em;
+      text-align: center;
+      padding-top: 4em;
+      margin: 0; }
+    .container4 h1 {
+      font-size: 3.5em;
+      text-align: center; }
+    .container4 p {
+      font-size: 1em; }
   .btn1 {
     margin-bottom: 1em;
     padding: 0.4em; }
@@ -979,10 +954,10 @@ footer h2 {
       background-color: #83b3d3;
       vertical-align: middle;
       display: none; }
-  .footer h2 {
+  .footer h2, .footer li {
     text-align: center; }
-  .footer li {
-    text-align: center; }
+  .info i {
+    display: none; }
   .copyrightText {
     padding: 8px 40px; }
   body {
@@ -993,12 +968,12 @@ footer h2 {
   .index2 {
     display: flex;
     flex-direction: column; }
-  .index2 h2 {
-    font-size: 1em; }
-  .index2 p {
-    font-size: 0.5em; }
-  .index2 img {
-    width: 100%; }
+    .index2 h2 {
+      font-size: 1em; }
+    .index2 p {
+      font-size: 0.5em; }
+    .index2 img {
+      width: 100%; }
   .home__text {
     color: #FA7016; }
   .wrapper {
@@ -1011,15 +986,15 @@ footer h2 {
     bottom: 0px;
     font-size: 6px;
     left: 0px; }
-  .wrapper .static-txt {
-    color: #FA7016;
-    font-size: 60px;
-    font-weight: 400; }
-  .wrapper .dynamic-txts {
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden; }
+    .wrapper .static-txt {
+      color: #FA7016;
+      font-size: 60px;
+      font-weight: 400; }
+    .wrapper .dynamic-txts {
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden; }
   .dynamic-txts li {
     list-style: none;
     font-size: 5em;
@@ -1031,25 +1006,25 @@ footer h2 {
     animation: slide 12s steps(4) infinite; }
   .dynamic-txts span {
     color: #FA7016; }
-  @keyframes slide {
-    100% {
-      top: -360px; } }
   .dynamic-txts li span {
     position: relative;
     margin: 5px 0;
     line-height: 90px;
     top: 0px;
     bottom: 100px; }
-  .dynamic-txts li span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 110%;
-    width: 100%;
-    background: #000;
-    border-left: 0px solid #FA7016;
-    animation: typing 3s steps(10) infinite;
-    display: none; }
+    .dynamic-txts li span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 110%;
+      width: 100%;
+      background: #000;
+      border-left: 0px solid #FA7016;
+      animation: typing 3s steps(10) infinite;
+      display: none; }
+  @keyframes slide {
+    100% {
+      top: -360px; } }
   @keyframes typing {
     40%, 60% {
       left: calc(100% + 30px); }
@@ -1070,10 +1045,10 @@ footer h2 {
     padding: 1.5em;
     font-size: 2.5em;
     background-color: #fff; }
-  .index2 span {
-    padding-left: 0em;
-    display: flex;
-    justify-content: center; }
+    .index2 span {
+      padding-left: 0em;
+      display: flex;
+      justify-content: center; }
   .btn {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
@@ -1093,16 +1068,16 @@ footer h2 {
     display: flex; }
   .container4 {
     width: 100%; }
-  .container4 h4 {
-    font-size: 1em;
-    text-align: center;
-    padding-top: 4em;
-    margin: 0; }
-  .container4 h1 {
-    font-size: 3.5em;
-    text-align: center; }
-  .container4 p {
-    font-size: 1em; }
+    .container4 h4 {
+      font-size: 1em;
+      text-align: center;
+      padding-top: 4em;
+      margin: 0; }
+    .container4 h1 {
+      font-size: 3.5em;
+      text-align: center; }
+    .container4 p {
+      font-size: 1em; }
   .btn1 {
     margin-bottom: 1em;
     padding: 0.4em; }
@@ -1122,33 +1097,34 @@ footer h2 {
     color: #000; }
   .uxuisec {
     margin: 1em; }
-  .uxuisec img {
-    display: none; }
-  .uxuisec1 img {
-    display: none; }
+    .uxuisec img {
+      display: none; }
   .uxuisec1 {
     margin: 1em; }
+    .uxuisec1 img {
+      display: none; }
   /* WEBDEV */
   .webdevback h1 {
     font-size: 3em;
     position: absolute;
     top: 20px; }
   .webdev1 {
-    background: #000; }
+    background: #000;
+    width: auto; }
   /* CIBERSEGURIDAD */
   .container1 {
     width: auto; }
   .cibers {
     flex-direction: column;
     padding: 1em; }
+    .cibers iframe {
+      width: auto; }
   .segserv1, .segserv2 {
     flex-direction: column;
     margin: 3em; }
   .segserv1 {
     padding-bottom: 10px; }
-  .imgseg img {
-    display: none; }
-  .imgseg2 img {
+  .imgseg img, .imgseg2 img {
     display: none; }
   /* SECCION DE CONTACTO*/
   .contact2 {
